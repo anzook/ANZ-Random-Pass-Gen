@@ -9,23 +9,24 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <header>
+    <header class ="conatiner-fluid">
       <h1>Password Generator</h1>
     </header>
-    <div class="todos">
-      <form id="todo-form" method="POST">
-        <label for="todo-text">Password length:</label>
+<div class="container main">
+    <div class="inputs-area">
+      <form id="inputs-form" method="POST">
+        <label for="pass-length">Password length:</label>
         <input type="text" placeholder="Password length?" name="pass-length" id="pass-length" />
 <br>
       <span>
-        Special Charachters
+        No Special Charachters
       </span>
       <label class="switch">
         <input type="checkbox" name="pass-special" id="pass-special">
         <span class="slider round"></span>
       </label>
       <span>
-No Special Charachters      
+Allow Special Charachters      
 </span>
   </form>
     </div>
@@ -37,11 +38,11 @@ No Special Charachters
       aria-label="Generated Password"
     ></textarea>
     <br>
-    <button id="generate">Generate Password</button>
-    <button id="copy">
+    <button class="button" id="generate">Generate Password</button>
+    <button class="button" id="copy">
       Copy to Clipboard
     </button>
-
+  </div>
     <script src="./script.js"></script>
     <!-- <script async type="text/javascript" 
             src="https://cdn.enzoic.com/js/enzoic.min.js" /> -->

@@ -6,7 +6,7 @@ var passPrint = document.querySelector("#password");
 
 
 var length = 8;
-var mode = "special";
+var mode = "standard";
 
 const upperLet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLet = "abcdefghijklmnopqrstuvwxyz";
@@ -18,11 +18,11 @@ var password;
 
 
 passSpecial.addEventListener("click", function() {
-  if (mode === "special") {
-    mode = "standard";
+  if (mode === "standard") {
+    mode = "special";
   }
   else {
-    mode = "special";
+    mode = "standard";
   }
 });
 
@@ -52,8 +52,9 @@ generate.addEventListener("click", function() {
 
 function createPass() {
 if ( mode === "special") {
-    var passBank = upperLet + lowerLet + numbers + specials;
+    var passBank = upperLet + lowerLet + numbers;
     password = passBank.charAt(Math.floor(Math.random()*passBank.length));
+    var passBank = upperLet + lowerLet + numbers + specials;            //I just don't like when passwords start with a special charachter
 
     for (let i = 0; i < (length -1); i++) {
         password += passBank.charAt(Math.floor(Math.random()*passBank.length));
