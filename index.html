@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <header class ="conatiner-fluid">
-      <h1>Password Generator</h1>
-    </header>
-<div class="container main">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="conatiner-fluid">
+    <h1>Password Generator</h1>
+  </header>
+  <div class="container main">
     <div class="inputs-area">
       <form id="inputs-form" method="POST">
         <label for="pass-length">Password length:</label>
         <input type="text" placeholder="Password length?" name="pass-length" id="pass-length" />
-<br>
-      <span>
-        No Special Charachters
-      </span>
-      <label class="switch">
-        <input type="checkbox" name="pass-special" id="pass-special">
-        <span class="slider round"></span>
-      </label>
-      <span>
-Allow Special Charachters      
-</span>
-  </form>
+        <br>
+        <span>
+          No Special Charachters
+        </span>
+        <label class="switch">
+          <input type="checkbox" name="pass-special" id="pass-special">
+          <span class="slider round"></span>
+        </label>
+        <span>
+          Allow Special Charachters
+        </span>
+      </form>
     </div>
     <h2>Generate a Password</h2>
-    <textarea
-      readonly
-      id="password"
-      placeholder="Your Secure Password"
-      aria-label="Generated Password"
-    ></textarea>
+    <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
     <br>
     <button class="button" id="generate">Generate Password</button>
     <button class="button" id="copy">
       Copy to Clipboard
     </button>
   </div>
-    <script src="./script.js"></script>
-    <!-- <script async type="text/javascript" 
+  <script src="./script.js"></script>
+  <!-- <script async type="text/javascript" 
             src="https://cdn.enzoic.com/js/enzoic.min.js" /> -->
-  </body>
+</body>
+
 </html>
